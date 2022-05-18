@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="Xamariners.Mobile.Core.Controls.AlertViews.MessageAlertOkCancelView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentView.Content>
+        <Frame
+            x:Name="FrameView"
+            BackgroundColor="White"
+            CornerRadius="8"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            WidthRequest="250">
+            <StackLayout BackgroundColor="White" Spacing="10">
+                <Label
+                    x:Name="TitleLabel"
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    Text="Title Text"
+                    TextColor="{StaticResource AccentColor}" />
+                <Label
+                    x:Name="MessageLabel"
+                    FontSize="Medium"
+                    Text="Message Text"
+                    TextColor="{StaticResource AccentColor}" />
+                <Grid>
+                    <Button
+                        x:Name="CancelButton"
+                        Grid.Column="0"
+                        BackgroundColor="{StaticResource AccentColor}"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Fill"
+                        Text="Cancel"
+                        TextColor="White">
+                        <Button.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="iOS" Value="42" />
+                                <On Platform="Android" Value="52" />
+                            </OnPlatform>
+                        </Button.HeightRequest>
+                    </Button>
+                    <Button
+                        x:Name="OkButton"
+                        Grid.Column="1"
+                        BackgroundColor="{StaticResource AccentColor}"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Fill"
+                        Text="Ok"
+                        TextColor="White">
+                        <Button.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="iOS" Value="42" />
+                                <On Platform="Android" Value="52" />
+                            </OnPlatform>
+                        </Button.HeightRequest>
+                    </Button>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*" />
+                        <ColumnDefinition Width="0.5*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="Xamariners.Mobile.Core.Controls.AlertViews.InfoMarkdownView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:markdown="clr-namespace:Xamariners.Mobile.Core.Controls.Markdown;assembly=Xamariners.Mobile.Core"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentView.Content>
+        <StackLayout Padding="20,40" VerticalOptions="Center">
+            <Frame
+                Padding="10"
+                CornerRadius="15"
+                HasShadow="False">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <ImageButton
+                        x:Name="imageButtonInfo"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        BackgroundColor="Transparent"
+                        Clicked="CloseInfoImageButton_OnClicked"
+                        HeightRequest="25"
+                        WidthRequest="25" />
+                    <ScrollView
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2">
+                        <markdown:MarkdownCustomView x:Name="markdownCustomView" />
+                    </ScrollView>
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
