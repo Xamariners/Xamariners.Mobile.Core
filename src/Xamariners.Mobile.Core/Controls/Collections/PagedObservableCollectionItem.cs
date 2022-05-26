@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamariners.Mobile.Core.Helpers.MVVM;
-using Xamariners.Mvvm;
+using Xamariners.Mvvm.Core;
 
 namespace Xamariners.Mobile.Core.Controls.Collections
 {

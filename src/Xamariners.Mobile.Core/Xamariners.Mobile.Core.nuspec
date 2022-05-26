@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Xamariners.Mobile.Core</id>
-    <version>0.1.17</version>
+    <version>0.1.18</version>
     <authors>Xamariners</authors>
     <owners>Xamariners</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

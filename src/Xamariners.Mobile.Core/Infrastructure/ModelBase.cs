@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel;
-using Xamariners.Mvvm;
+using Xamariners.Mvvm.Core;
 
 namespace Xamariners.Mobile.Core.Infrastructure
 {
